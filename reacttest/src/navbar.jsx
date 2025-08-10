@@ -7,9 +7,14 @@ import Project from './Projects.jsx';
 export default function NavBar() {
   return (
     <nav className="navbar">
-      <Link to="/" className='navLink'>Home</Link>
-      <Link to="/projects" className='navLink'>Projects</Link>
-      <Link to="/about" className='navLink'>About Me</Link>
+      <div>
+        <Link to="/" className='navLink'>Home</Link>
+        <Link to="/projects" className='navLink'>Projects</Link>
+        <Link to="/about" className='navLink'>About Me</Link>
+      </div>
+       <div className="nav-logo-wrapper">
+        <p>STEG</p>
+      </div>
     </nav>
   );
 }

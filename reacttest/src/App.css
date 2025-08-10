@@ -4,10 +4,18 @@
   padding: 2rem;
   text-align: center;
 }
+.fade-in {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
 
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
 .logo {
   height: 6em;
-  padding: 1.5em;
+  padding: .5em;
   will-change: filter;
   transition: filter 300ms;
 }
@@ -25,17 +33,60 @@
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  a:nth-of-type(1) .logo {
+    border-radius: 50%;
   }
 }
-
+.logolink {
+    border-radius: 80%;
+    padding: .5em;
+}
+.navbar-logo {
+  height: 80px;  
+  width: auto;
+  cursor: pointer;
+}
+.navbar-logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.nav-logo-wrapper {
+  font-family: 'font1', sans-serif;
+  font-size: 2rem;
+  display: flex;
+  align-items: flex-start; 
+  color: #3c43a5;
+   margin-top: -75px;
+}
 .card {
   padding: 2em;
+  color: #ffffff;
 }
+.spacer {
+  padding: 5em;
+}
+.AboutMe {
+  padding-top: 70px;
+  margin-top: 20px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.nametitle{
+  margin: 0;
+  padding: 0;
 
+}
+.gallery-image{
+   width: 200px;      
+  height: 200px;     
+  object-fit: cover; 
+  object-position: center; 
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  transition: transform 0.3s;
+}
 .Introduction {
-  color: #888;
+  color: #b0ced4;
 }
 .navbar {
   padding: 2.5rem;
