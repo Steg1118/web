@@ -15,9 +15,9 @@ export default function About() {
       <section>
         <h2>Me</h2>
         <div>
-          <img src="/public/images/seaninHK.jpg" alt="Image" className="gallery-image" />
-          <img src="/public/images/mochasleep.jpg" alt="Image 2" className="gallery-image" />
-          <img src="/public/images/headshot.jpg" alt="Image 3" className="gallery-image" />
+          <img src="/images/seaninHK.jpg" alt="Image" className="gallery-image" />
+          <img src="/images/mochasleep.jpg" alt="Image 2" className="gallery-image" />
+          <img src="/images/headshot.jpg" alt="Image 3" className="gallery-image" />
 
         </div>
       </section>
@@ -38,25 +38,25 @@ export default function About() {
           My Top 9 Video Games:
         </p>
         <div>
-          <img src="/public/images/topgames/portal2-1638924084230-522655275.jpg" alt="Image" className="gallery-image" />
-          <img src="/public/images/topgames/elden-ring-button-03-1623460560664-3999650182.jpg" alt="Image 2" className="gallery-image" />
-          <img src="/public/images/topgames/QKJRzanGk86ezpx2pk5QqQaduoXGJV3u8vHIejSav4MYiHA3F7zNgxSOF9bJmt2T-814084814.jpg" alt="Image 3" className="gallery-image" />
+          <img src="/images/topgames/portal2-1638924084230-522655275.jpg" alt="Image" className="gallery-image" />
+          <img src="/images/topgames/elden-ring-button-03-1623460560664-3999650182.jpg" alt="Image 2" className="gallery-image" />
+          <img src="/images/topgames/QKJRzanGk86ezpx2pk5QqQaduoXGJV3u8vHIejSav4MYiHA3F7zNgxSOF9bJmt2T-814084814.jpg" alt="Image 3" className="gallery-image" />
         </div>
         <div>
-          <img src="/public/images/topgames/image-2140392718-1.jpg" alt="Image" className="gallery-image" />
-          <img src="/public/images/topgames/fallout-new-vegas-500540987.png" alt="Image 2" className="gallery-image" />
-          <img src="/public/images/topgames/sonic-adventure-2---button-1547850392122-3838835479.jpg" alt="Image 3" className="gallery-image" />
+          <img src="/images/topgames/image-2140392718-1.jpg" alt="Image" className="gallery-image" />
+          <img src="/images/topgames/fallout-new-vegas-500540987.png" alt="Image 2" className="gallery-image" />
+          <img src="/images/topgames/sonic-adventure-2---button-1547850392122-3838835479.jpg" alt="Image 3" className="gallery-image" />
         </div>
         <div>
-          <img src="/public/images/topgames/Eyd39JI06dtAxZReqdhJHXN5-3633685964.jpg" alt="Image" className="gallery-image" />
-          <img src="/public/images/topgames/283094-minecraft-xbox-360-edition-xbox-360-front-cover-2807904834.png" alt="Image 2" className="gallery-image" />
-          <img src="/public/images/topgames/1006146_front-1885294038.jpg" alt="Image 3" className="gallery-image" />
+          <img src="/images/topgames/Eyd39JI06dtAxZReqdhJHXN5-3633685964.jpg" alt="Image" className="gallery-image" />
+          <img src="/images/topgames/283094-minecraft-xbox-360-edition-xbox-360-front-cover-2807904834.png" alt="Image 2" className="gallery-image" />
+          <img src="/images/topgames/1006146_front-1885294038.jpg" alt="Image 3" className="gallery-image" />
         </div>
         <p>
           Check out my Steam Profile:
         </p>
         <a href="https://steamcommunity.com/id/steg1118/" target="_blank" rel="noopener noreferrer">
-           <img src="/public/images/steam-logo-steam-icon-transparent-free-png-3595373590.png" className="logolink" alt="My Steam Profile" style={{width: '100px', borderRadius: '10px'}} />
+           <img src="/images/steam-logo-steam-icon-transparent-free-png-3595373590.png" className="logolink" alt="My Steam Profile" style={{width: '100px', borderRadius: '10px'}} />
         </a>
 
 
