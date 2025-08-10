@@ -14,9 +14,6 @@
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
 
 @keyframes logo-spin {
   from {
@@ -37,6 +34,41 @@
   padding: 2em;
 }
 
-.read-the-docs {
+.Introduction {
   color: #888;
+}
+.navbar {
+  padding: 2.5rem;
+  background-color: #121212;   
+  height: 2rem;         
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin: 0;
+}
+@font-face {
+  font-family: 'Stegfont';
+  src: url('../fonts/Stegfont-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'font1';
+  src: url('../fonts/Heavitas.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+.navLink {
+  font-size: 22px; 
+  font-family: 'font1', sans-serif;
+  color: #d5dee9;
+  text-decoration: none;
+  margin-right: 5rem;
+ 
+}
+
+.navLink:hover {
+  color: #2677a5;
+  text-shadow: 0 0 3em #ffffffaa;
 }
