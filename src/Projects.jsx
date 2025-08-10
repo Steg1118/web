@@ -38,7 +38,7 @@ export default function Home() {
         <div>
           <img src={`${process.env.PUBLIC_URL}images/art1.png`} alt="Art 1" className="gallery-image" />
           <img src={`${process.env.PUBLIC_URL}images/art2.png`} alt="Art 2" className="gallery-image" />
-          <img src={`${process.env.PUBLIC_URL}images/art3.png`} alt="Art 3" className="gallery-image" />
+          <img src={`${process.env.PUBLIC_URL}images/art3.png`} alt="Art 3" className="gallery-image" /> 
         </div>
       </section>
     </div>
