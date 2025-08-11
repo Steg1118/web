@@ -40,10 +40,10 @@ export default function Home() {
         Feel free to explore my projects and learn more about me.
       </p>
       <a href="https://github.com/Steg1118" target="_blank">
-          <img src={`${import.meta.env.BASE_URL}images/GitHub-Simbolo-1555934127.png`} className="logolink" alt="githublogo" style={{ width: "100px", height: "50px" }} />
+          <img src={`${import.meta.env.BASE_URL}images/GitHub-Simbolo-1555934127.png`} className="logo" alt="githublogo" style={{ width: "100px", height: "50px" }} />
       </a>
       <a href="https://github.com/Steg1118" target="_blank">
-          <img src={`${import.meta.env.BASE_URL}images/Linkedin-Logo-3802517563.png`} className="logolink" alt="LinkedInlogo" style={{ width: "100px", height: "50px" }} />
+          <img src={`${import.meta.env.BASE_URL}images/Linkedin-Logo-3802517563.png`} className="logo" alt="LinkedInlogo" style={{ width: "100px", height: "50px" }} />
       </a>
     </>
   )

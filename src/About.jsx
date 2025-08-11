@@ -2,6 +2,7 @@
 import './App.css';
 
 export default function About() {
+  
   return (
   
     <div className="AboutMe">
@@ -33,9 +34,9 @@ export default function About() {
       </div>
       <section>
         <h1>Learn More About Me</h1> 
-        <p>
+        <h2>
           My Top 9 Video Games:
-        </p>
+        </h2>
         <div>
           <img src="./images/topgames/portal2-1638924084230-522655275.jpg" alt="Image" className="gallery-image" />
           <img src="./images/topgames/botw-1024x1024-2372044394.jpeg" alt="Image 2" className="gallery-image" />
@@ -55,12 +56,21 @@ export default function About() {
           Check out my Steam Profile:
         </p>
         <a href="https://steamcommunity.com/id/steg1118/" target="_blank" rel="noopener noreferrer">
-           <img src="./images/steam-logo-steam-icon-transparent-free-png-3595373590.png" className="logolink" alt="My Steam Profile" style={{width: '100px', borderRadius: '10px'}} />
+           <img src="./images/steam-logo-steam-icon-transparent-free-png-3595373590.png" className="logo" alt="My Steam Profile" style={{width: '100px', borderRadius: '10px'}} />
         </a>
 
 
       </section>
-
+      <section>
+        <h2>
+          My Youtube Channel:
+        </h2>
+        <div>
+          <a href="https://www.youtube.com/@Steg1118/featured" target="_blank" rel="noopener noreferrer">
+            <img src="./images/youtube-logo-transparent-circle-9-2818741738.png" alt="Image" className="logo" />
+          </a>
+        </div>
+      </section>
 
     </div>
 
