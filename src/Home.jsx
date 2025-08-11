@@ -26,7 +26,7 @@ export default function Home() {
       <div>
         <h2 className={"nametitle"}>Steg1118</h2>
         <a href="https://github.com/Steg1118" target="_blank">
-          <img src="/images/snichead.png" className="logo" alt="sonic logo" />
+          <img src="./images/snichead.png" className="logo" alt="sonic logo" />
         </a>
       </div>
       <h1 className={"header " + (fade ? "fade-in" : "fade-out")}>{messages[count]}</h1>
@@ -40,10 +40,10 @@ export default function Home() {
         Feel free to explore my projects and learn more about me.
       </p>
       <a href="https://github.com/Steg1118" target="_blank">
-          <img src="/images/GitHub-Simbolo-1555934127.png" className="logolink" alt="githublogo" style={{ width: "100px", height: "50px" }} />
+          <img src="./images/GitHub-Simbolo-1555934127.png" className="logolink" alt="githublogo" style={{ width: "100px", height: "50px" }} />
       </a>
       <a href="https://github.com/Steg1118" target="_blank">
-          <img src="/images/Linkedin-Logo-3802517563.png" className="logolink" alt="LinkedInlogo" style={{ width: "100px", height: "50px" }} />
+          <img src="./images/Linkedin-Logo-3802517563.png" className="logolink" alt="LinkedInlogo" style={{ width: "100px", height: "50px" }} />
       </a>
     </>
   )

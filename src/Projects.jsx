@@ -36,9 +36,9 @@ export default function Projects() {
           I also create art on Instagram: <a href="https://www.instagram.com/sean_superepicdraw/" target="_blank" rel="noopener noreferrer">@sean_superepicdraw</a>
         </p>
         <div>
-          <img src="/images/art1.png" alt="Art 1" className="gallery-image" />
-          <img src="/images/art2.png" alt="Art 2" className="gallery-image" />
-          <img src="/images/art3.png" alt="Art 3" className="gallery-image" /> 
+          <img src="./images/art1.png" alt="Art 1" className="gallery-image" />
+          <img src="./images/art2.png" alt="Art 2" className="gallery-image" />
+          <img src="./images/art3.png" alt="Art 3" className="gallery-image" /> 
         </div>
       </section>
     </div>
