@@ -32,17 +32,33 @@ function clean(value, maxLength) {
   return String(value || '').trim().slice(0, maxLength);
 }
 
-async function sendNotification(contact) {
+function escapeHtml(value) {
+  return String(value)
+    .replaceAll('&', '&amp;')
+    .replaceAll('<', '&lt;')
+    .replaceAll('>', '&gt;')
+    .replaceAll('"', '&quot;')
+    .replaceAll("'", '&#039;');
+}
+
+async function sendNotification(contact, contactId) {
   if (!process.env.RESEND_API_KEY) return false;
+  const receivedAt = new Date().toLocaleString('en-US', {
+    timeZone: 'America/Los_Angeles',
+    dateStyle: 'medium',
+    timeStyle: 'short',
+  });
+  const messageHtml = escapeHtml(contact.message).replaceAll('\n', '<br>');
   const response = await fetch('https://api.resend.com/emails', {
     method: 'POST',
     headers: { Authorization: `Bearer ${process.env.RESEND_API_KEY}`, 'Content-Type': 'application/json' },
     body: JSON.stringify({
       from: process.env.CONTACT_FROM_EMAIL || 'Sean Grant Portfolio <onboarding@resend.dev>',
-      to: ['seantegrant@gmail.com'],
+      to: [process.env.CONTACT_TO_EMAIL || 'seantegrant@gmail.com'],
       reply_to: contact.email,
-      subject: `Portfolio inquiry from ${contact.name}`,
-      text: `Name: ${contact.name}\nEmail: ${contact.email}\nCompany: ${contact.company || 'Not provided'}\n\n${contact.message}`,
+      subject: `Portfolio inquiry #${contactId} · ${contact.name}`,
+      text: `NEW PORTFOLIO INQUIRY\n\nName: ${contact.name}\nReply email: ${contact.email}\nReceived: ${receivedAt}\nContact ID: ${contactId}\n\nMESSAGE\n${contact.message}`,
+      html: `<div style="font-family:Arial,sans-serif;max-width:620px;color:#132033"><h1>New portfolio inquiry</h1><p><strong>Name:</strong> ${escapeHtml(contact.name)}</p><p><strong>Reply email:</strong> <a href="mailto:${escapeHtml(contact.email)}">${escapeHtml(contact.email)}</a></p><p><strong>Received:</strong> ${escapeHtml(receivedAt)}</p><div style="margin-top:24px;padding:18px;border-left:4px solid #35c8ef;background:#f5fbfd"><strong>Message</strong><p style="line-height:1.6">${messageHtml}</p></div><p style="color:#64748b;font-size:12px">Contact #${contactId}</p></div>`,
     }),
   });
   if (!response.ok) throw new Error(`Email provider returned ${response.status}`);
@@ -64,7 +80,7 @@ export async function processContact(payload = {}) {
   const result = insertContact.run(contact.name, contact.email, contact.company || null, contact.message, 'pending');
   let emailed = false;
   try {
-    emailed = await sendNotification(contact);
+    emailed = await sendNotification(contact, result.lastInsertRowid);
     updateNotification.run(emailed ? 'sent' : 'not_configured', result.lastInsertRowid);
   } catch (error) {
     updateNotification.run('failed', result.lastInsertRowid);

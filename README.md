@@ -26,6 +26,7 @@ To send contact notifications to `seantegrant@gmail.com`, configure:
 ```text
 RESEND_API_KEY=your_resend_api_key
 CONTACT_FROM_EMAIL=Sean Grant Portfolio <onboarding@resend.dev>
+CONTACT_TO_EMAIL=the_email_used_for_your_resend_account
 ```
 
 Every valid submission is stored in SQLite before notification delivery is attempted. Without `RESEND_API_KEY`, submissions remain stored with a `not_configured` notification status; the website never opens the visitor's email application.
