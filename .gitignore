@@ -11,6 +11,13 @@ node_modules
 dist
 dist-ssr
 *.local
+.env
+data/*.db
+data/*.db-shm
+data/*.db-wal
+tmp/
+/images/
+SeanGrantResume-8192026.pdf
 
 # Editor directories and files
 .vscode/*

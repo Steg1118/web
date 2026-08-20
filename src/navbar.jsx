@@ -1,20 +1,16 @@
-import { Link } from 'react-router-dom';
-import './App.css'
-import About from './About.jsx';
-import Home from './Home.jsx';
-import Project from './Projects.jsx';
-
+import { NavLink } from 'react-router-dom';
+import './App.css';
 export default function NavBar() {
-  return (
-    <nav className="navbar">
-      <div>
-        <Link to="/" className='navLink'>Home</Link>
-        <Link to="/projects" className='navLink'>Projects</Link>
-        <Link to="/about" className='navLink'>About Me</Link>
-      </div>
-       <div className="nav-logo-wrapper">
-        <p>STEG</p>
-      </div>
-    </nav>
-  );
+  function openContact() {
+    if (window.location.pathname.replace(/\/$/, '') === import.meta.env.BASE_URL.replace(/\/$/, '')) {
+      window.dispatchEvent(new Event('open-contact'));
+      return;
+    }
+    window.location.href = `${import.meta.env.BASE_URL}?contact=open`;
+  }
+
+  return <nav className="navbar" aria-label="Primary navigation">
+    <NavLink to="/" className="brand" aria-label="Sean Grant home"><span className="brand-text">SEAN GRANT</span></NavLink>
+    <div className="nav-links"><NavLink to="/" end className={({isActive}) => `navLink ${isActive ? 'active' : ''}`}>Home</NavLink><NavLink to="/projects" className={({isActive}) => `navLink ${isActive ? 'active' : ''}`}>Work</NavLink><NavLink to="/about" className={({isActive}) => `navLink ${isActive ? 'active' : ''}`}>About</NavLink><button className="nav-contact" type="button" onClick={openContact}>Contact</button></div>
+  </nav>;
 }
